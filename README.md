@@ -1,18 +1,13 @@
-# WordPress Exdda Plugin
+# HTML Development KIT
 
-## Requirement 
-- Composer [HERE](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+## Requirement  
 - Nodejs [HERE](https://nodejs.org/en/download/)
-- PHP >= 8.0.11 
+
 ## install
 - Clone git repository
 ```shell script
-git clone git@github.com:therakib7/dda.git
-cd dda
-```
-- Generate vendor autoload files
-```shell script
-composer dumpautoload -o 
+git clone git@github.com:therakib7/html-dev-kit.git
+cd html-dev-kit
 ```
 - Install Node package
 ```shell script
@@ -20,36 +15,7 @@ npm install
 ```
 
 ## Changes
-- You need to change DDA Project to your plugin name
-- You need to change dda to your plugin slug
-- Set name space composer.json psr-4 to tour unique namespace for the app folder
-```json
-{
-  "Exdda\\": "includes"
-}
-```
-- Rename includes/Exdda.php to your app class name
-```php
-final class Exdda{
-
-}
-// TO =>
-final class YourPluginInitClass{
-
-}
-//================ Start up function ==============
-function exdda() {
-    return Exdda::getInstance();
-}
-
-exdda();
-// TO =>
-function your_exdda_function() {
-    return Exdda::getInstance();
-}
-
-your_exdda_function();
-```
+- You need to change html-dev-kit name 
 
 ## NPM Helper comment
 ```shell script
@@ -59,13 +25,8 @@ npm run dev
 npm run prod
 ```  
 ```shell script
-npm run package 
+npm run watch 
 ``` 
 ```shell script
-npm run zip 
+npm run watch-pro 
 ``` 
-
-## Task list
-- [ ] Add Laravel mix support to compile gutenberg block 
-- [ ] Add some helper Class 
-- [ ] Add some feature that can add extra functions to a class
