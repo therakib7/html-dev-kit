@@ -1,0 +1,30 @@
+
+
+ul#order-target {
+    max-width: 500px;
+}
+
+ul#order-target li {
+    padding: 2px 0;
+    margin: 4px 0;
+    border: 1px solid #dddddd;
+    cursor: move; 
+    background-color: #f9f9f9;
+}
+
+ul#order-target li span {
+    display: block;
+    padding: 5px 10px;
+    color: #555;
+    font-size: 13px;
+}
+
+#order-terms #tto_sortable li:nth-child(2n+1) > .item {
+    background-color: #fff !important;
+}
+
+ul#order-target li.placeholder {
+    border: dashed 2px #ccc;
+    height: 30px;
+    background-color: #fff;
+}

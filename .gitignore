@@ -1,0 +1,9 @@
+.DS_Store
+npm-debug.log 
+.idea
+.vscode
+node_modules 
+dist
+*.zip
+mix-manifest.json
+package-lock.json

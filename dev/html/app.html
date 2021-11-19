@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+	<!-- Meta Data -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.png">
+	<link rel="stylesheet" href="dependencies/fontello/css/fontello.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap"
+		rel="stylesheet">
+	{% block header %}{% endblock %}
+	<!-- Site Stylesheet -->
+	<link rel="stylesheet" href="assets/css/main.min.css">
+
+</head>
+
+<body {% block attribute %}{% endblock %}>
+	<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+	<div id="wrapper" class="wrapper">
+		{% block content %}
+		{% endblock %}
+	</div>
+	{% block footer %}{% endblock %}
+
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

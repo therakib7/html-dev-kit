@@ -1,0 +1,35 @@
+{
+	"name": "dda",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:therakib7/html-laramix.git"
+	},
+	"homepage": "",
+	"scripts": {
+		"dev": "mix",
+		"prod": "mix -p",
+		"watch": "mix watch",
+		"watch-prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --watch --config=node_modules/laravel-mix/setup/webpack.config.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/preset-react": "^7.14.5",
+		"cross-env": "^7.0.3",
+		"autoprefixer": "^10.4.0",
+		"laravel-mix": "^6.0.8",
+		"laravel-mix-nunjucks": "^1.1.0",
+		"postcss": "^8.3.11",
+		"postcss-scss": "^4.0.2",
+		"sass": "^1.37.0",
+		"sass-loader": "^8.0.2",
+		"tailwindcss": "^2.2.19"
+	},
+	"dependencies": {
+		"axios": "^0.21.1"
+	}
+}
