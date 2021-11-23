@@ -3,6 +3,7 @@ npm-debug.log
 .idea
 .vscode
 node_modules 
+todo.txt
 dist
 *.zip
 mix-manifest.json

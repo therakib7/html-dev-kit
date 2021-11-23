@@ -11,18 +11,19 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'producti
         processCssUrls: false
     });
 
-    mix.js('dev/js/main.js', `dist/assets/js/main${min}.js`) 
-        .sass('dev/scss/main.scss', `dist/assets/css/main${min}.css`) 
-		.njk('dev/html', 'dist/', {
+    mix.js('src/js/main.js', `dist/assets/js/main${min}.js`) 
+        .sass('src/scss/main.scss', `dist/assets/css/main${min}.css`).sourceMaps() 
+		.njk('src/html', 'dist/', {
 			// ext: '.html',
 			// data: {},
 			// marked: null,
 			// envOptions: null,
 			// manageEnv: (nunjucks) => {},
 		})
-		.postCss('dev/scss/tailwind.css', `dist/assets/css/tailwind${min}.css`, [ 
+		.postCss('src/scss/tailwind.css', `dist/assets/css/tailwind${min}.css`, [ 
 			require('tailwindcss'),
 		]) 
-        .copy('dev/img', 'dist/assets/img')
-        .copy('dev/vendor', 'dist/assets/vendor');
+        .copy('src/imgs', 'dist/assets/imgs')
+        .copy('src/fonts', 'dist/assets/fonts')
+        .copy('src/vendor', 'dist/assets/vendor');
 }  
