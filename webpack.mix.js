@@ -1,7 +1,9 @@
 const mix = require('laravel-mix'); 
 require('laravel-mix-nunjucks')
-const min = Mix.inProduction() ? '.min' : ''; 
- 
+const min = mix.inProduction() ? '.min' : ''; 
+
+// mix.webpackConfig({ devtool: "inline-source-map" }); //TODO: check it for global css source map
+
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
     
     mix.options({
@@ -9,7 +11,7 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'producti
             extractComments: false,
         },
         processCssUrls: false
-    });
+    }); 
 
     mix.js('src/js/main.js', `dist/assets/js/main${min}.js`) 
         .sass('src/scss/main.scss', `dist/assets/css/main${min}.css`).sourceMaps() 
@@ -25,5 +27,5 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'producti
 		]) 
         .copy('src/imgs', 'dist/assets/imgs')
         .copy('src/fonts', 'dist/assets/fonts')
-        .copy('src/vendor', 'dist/assets/vendor');
+        .copy('src/vendor', 'dist/assets/vendor'); 
 }  
